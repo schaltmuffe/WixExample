@@ -48,3 +48,11 @@ $(variable_name)
 ## Add packages
 
 Add name to xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui" element and install nuget package
+
+# Tasks
+
+## File creation
+
+Add another file to the installtion directory.
+
+
