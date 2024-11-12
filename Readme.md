@@ -39,7 +39,7 @@ During the build process, all references are resolved, and components are includ
 
 Burn is a bootstrapper that allows you to chain multiple installers, download prerequisites, and customize the user interface.
 
-### MSBuild Variable access
+## MSBuild Variable access
 
 For commen MSBuild properties see [here](https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-properties?view=vs-2022)
 
@@ -47,5 +47,4 @@ $(variable_name)
 
 ## Add packages
 
-Add name to <Wix xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui"> element and install nuget package
-
+Add name to xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui" element and install nuget package
