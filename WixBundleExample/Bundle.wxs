@@ -1,0 +1,18 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:bal="http://wixtoolset.org/schemas/v4/wxs/bal">
+	<!--
+	Lets you manage multiple MSI Packages or Exe packages and chain them into one installer
+	-->
+  <Bundle Name="WixBundleExample" Manufacturer="TODO Manufacturer" Version="1.0.0.0" UpgradeCode="90e45779-ee60-49bd-8b22-cfd20091423e">
+    <BootstrapperApplication>
+      <bal:WixStandardBootstrapperApplication LicenseUrl="https://www.example.com/license" Theme="hyperlinkLicense" />
+    </BootstrapperApplication>
+
+    <Chain>
+		<!--
+		Install path detected via project reference
+		-->
+		<MsiPackage Id="WixExample" SourceFile="WixExample.msi"/>
+    </Chain>
+
+  </Bundle>
+</Wix>

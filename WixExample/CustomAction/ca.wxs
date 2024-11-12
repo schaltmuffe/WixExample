@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+<Fragment>
+	<!--
+	Executes a custom exe
+	Executed: deferred = custom action runs in-script
+	Return: ignore = Indicates that the custom action will run synchronously and the return code will not be checked
+	Impersonate: use user context of the installing user when executing this custom action
+	-->
+	<CustomAction Id="LaunchNotepadPlusPlus" Directory="INSTALLFOLDER" ExeCommand="C:\Program Files\Notepad++\notepad++.exe" Execute="deferred" Return="ignore" Impersonate="no" />
+ </Fragment>
+</Wix>

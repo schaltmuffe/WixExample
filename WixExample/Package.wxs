@@ -1,0 +1,50 @@
+﻿<!--
+Add UI Package for Gui
+-->
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+	<!-- Package definition 
+	Name: Name shown in the Installed apps
+	Manufacturer: name of the company
+	Version: version of the package
+	UpgradeCode:  upgrade code identifies packages that are "related" to each other.
+				  A typical relationship is packages of the same software product with different versions.
+	-->
+  <Package Name="WixExample" Manufacturer="Jonas" Version="1.0.0.0" UpgradeCode="ec25c31c-5266-4776-846c-35007e5dd004">
+	  <!-- 
+	  <Paired with Upgrade Code to detect upgrades. DowngradeErrorMessage specify a message to be shown
+	  -->
+    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+
+	  <!--
+	  Load custom UI
+	  -->
+	  <ui:WixUI Id="WixUI_Minimal_test"/>
+
+	  <!--
+	  Change pictures
+	  -->
+	  <WixVariable Id="WixUIBannerBmp" Value=".\Dialog Bitmaps\banner.jpg" />
+	  <WixVariable Id="WixUIDialogBmp" Value=".\Dialog Bitmaps\welcome.png" />
+	  
+	  <!--
+	  Required Main feature
+	  -->
+    <Feature Id="Main">
+		<!--
+		Components group resources for consistent installation.
+		References link elements in different files.
+		-->
+      <ComponentGroupRef Id="WinFormesFiles" />
+    </Feature>
+	  
+	  <!--
+	  This is where you put custom actions
+	  -->
+	   <InstallExecuteSequence>
+		   <!--
+		   References to LaunchNotepadPlusPlus and is executed after the files are installed
+		   -->
+		   <Custom Action="LaunchNotepadPlusPlus" After="InstallFiles" />
+	   </InstallExecuteSequence>
+  </Package>
+</Wix>

@@ -1,0 +1,23 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<!--
+	Fragement != Package
+	Tells Wix that this should be included elsewhere
+	-->
+  <Fragment>
+	  <!--
+	  Wix defined standard Directory more can be found here https://wixtoolset.org/docs/schema/wxs/standarddirectorytype/
+	  Re.solves to C:\Program Files (x86) or C:\Program Files determed by Bitness of the packages
+	  -->
+    <StandardDirectory Id="ProgramFiles6432Folder">
+		<!--
+		Propertys defined in packages.wxs are used
+		-->
+		<Directory Id="INSTALLFOLDER" Name="!(bind.Property.Manufacturer) !(bind.Property.ProductName)">
+			<!--
+			Directory to put the harvested files into
+			-->
+			<Directory Id="WINFORMESSTALLLOCATION"></Directory>
+		</Directory>
+    </StandardDirectory>
+  </Fragment>
+</Wix>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="WixToolset.Sdk/4.0.3">
+  <ItemGroup>
+    <ProjectReference Include="..\WixExampleWinFormes\WixExampleWinFormes.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.Heat" Version="4.0.5" />
+    <PackageReference Include="WixToolset.UI.wixext" Version="4.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--
+		Specifiy path to itterate threw
+		Generates _WinFormesFiles_dir.wxs with components
+		-->
+    <HarvestDirectory Include="..\WixExampleWinFormes\bin\Debug\net8.0-windows">
+      <SuppressRootDirectory>True</SuppressRootDirectory>
+      <ComponentGroupName>WinFormesFiles</ComponentGroupName>
+      <DirectoryRefId>WINFORMESSTALLLOCATION</DirectoryRefId>
+    </HarvestDirectory>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dialog Bitmaps\" />
+  </ItemGroup>
+</Project>
