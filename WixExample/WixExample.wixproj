@@ -1,5 +1,6 @@
 ﻿<Project Sdk="WixToolset.Sdk/4.0.3">
   <ItemGroup>
+    <ProjectReference Include="..\CustomAction\CustomAction.csproj" />
     <ProjectReference Include="..\WixExampleWinFormes\WixExampleWinFormes.csproj" />
   </ItemGroup>
   <ItemGroup>

@@ -8,5 +8,13 @@
 	Impersonate: use user context of the installing user when executing this custom action
 	-->
 	<CustomAction Id="LaunchNotepadPlusPlus" Directory="INSTALLFOLDER" ExeCommand="C:\Program Files\Notepad++\notepad++.exe" Execute="deferred" Return="ignore" Impersonate="no" />
+	<!--
+	Create custom action project for wix 4
+	Reference project
+	add method name in DllEntry
+	Return: check = Indicates that the custom action will run synchronously and the return code will be checked
+	-->
+	<Binary Id='CustomActionsDll' SourceFile="C:\Users\Jonas.Brueck\source\repos\WixExample\CustomAction\bin\Debug\net472\CustomAction.CA.dll" />
+	<CustomAction Id="CustomAction" DllEntry="CustomAction1" Execute="immediate" Return="check" Impersonate="no" BinaryRef="CustomActionsDll" />
  </Fragment>
 </Wix>

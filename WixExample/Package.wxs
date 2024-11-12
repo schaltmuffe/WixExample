@@ -45,6 +45,7 @@ Add UI Package for Gui
 		   References to LaunchNotepadPlusPlus and is executed after the files are installed
 		   -->
 		   <Custom Action="LaunchNotepadPlusPlus" After="InstallFiles" />
+		   <Custom Action='CustomAction' After="InstallFiles" />
 	   </InstallExecuteSequence>
   </Package>
 </Wix>
