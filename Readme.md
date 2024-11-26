@@ -49,7 +49,19 @@ $(variable_name)
 
 Add name to xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui" element and install nuget package
 
+## Logs
+
+To enable logging, add the following to the command line:
+
+```
+msiexec /i WixExample.msi /L*v yourLogFile.txt
+```
+
 # Tasks
+
+## Fix Bug with reinstallation
+
+When the application is reinstalled, the previous installation is not removed.
 
 ## File creation
 
