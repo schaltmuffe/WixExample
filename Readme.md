@@ -55,4 +55,8 @@ Add name to xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui" element and insta
 
 Add another file to the installtion directory.
 
+## Read registry value
+
+Read out some value from the registry and use it as a condition for a custom action.
+
 

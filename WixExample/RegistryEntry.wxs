@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+	  <Component Id="WixExampleRegistryEntriesComponent" Guid="F352E82F-F7BC-4568-B18C-169706C26F59" Directory="TARGETDIR">
+		  <!--
+		  HKEY_LOCAL_MACHINE (kurz: HKLM) und HKEY_CURRENT_USER (kurz: HKCU)
+		  -->
+		  <RegistryKey Id="WIXEXAMPLEHKCU" Root="HKCU" Key="Software\WixExampleWinFormes" ForceCreateOnInstall="yes">
+			  <RegistryValue Id="WIXEXAMPLEHKCURegistryEntry" Name="Wix_Example_Version" Value="1" Type="integer" />
+		  </RegistryKey>
+	  </Component>
+  </Fragment>
+</Wix>

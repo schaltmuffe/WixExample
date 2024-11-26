@@ -36,6 +36,9 @@ Add UI Package for Gui
 		-->
       <ComponentGroupRef Id="WinFormesFiles" />
     </Feature>
+	<Feature Id="RegistryEntry">
+		<ComponentRef Id="WixExampleRegistryEntriesComponent"/>
+	</Feature>
 	  
 	  <!--
 	  This is where you put custom actions
