@@ -8,12 +8,14 @@ Add UI Package for Gui
 	Version: version of the package
 	UpgradeCode:  upgrade code identifies packages that are "related" to each other.
 				  A typical relationship is packages of the same software product with different versions.
+	ProductCode: A unique identifier for the product. This is a GUID. If you change this, you will create a new product. If not set , it will be generated automatically.
 	-->
   <Package Name="WixExample" Manufacturer="Jonas" Version="1.0.0.0" UpgradeCode="ec25c31c-5266-4776-846c-35007e5dd004">
 	  <!-- 
 	  <Paired with Upgrade Code to detect upgrades. DowngradeErrorMessage specify a message to be shown
+	  AllowSameVersionUpgrades yes -> otherwise everythime you build the installer, it will be a new version
 	  -->
-    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+    <MajorUpgrade AllowDowngrades="no" AllowSameVersionUpgrades="yes" DowngradeErrorMessage="!(loc.DowngradeError)" />
 
 	  <!--
 	  Load custom UI

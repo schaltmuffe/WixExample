@@ -61,14 +61,19 @@ msiexec /i WixExample.msi /L*v yourLogFile.txt
 
 ## Fix Bug with reinstallation
 
-When the application is reinstalled, the previous installation is not removed.
+When the application is uninstalled, the registry key is not removed.
 
 ## File creation
 
 Add another file to the installtion directory.
 
+### Upgrade
+
+Create a new version of the installer and test the upgrade. Change something in win formes. Major version upgrade.
+
 ## Read registry value
 
 Read out some value from the registry and use it as a condition for a custom action.
+
 
 
