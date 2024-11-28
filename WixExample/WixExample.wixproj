@@ -19,6 +19,6 @@
 	</HarvestDirectory>
 	</ItemGroup>
   <ItemGroup>
-    <Folder Include="Dialog Bitmaps\" />
+    <Folder Include="Dialog_Bitmaps\" />
   </ItemGroup>
 </Project>
