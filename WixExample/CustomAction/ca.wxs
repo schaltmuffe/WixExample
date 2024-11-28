@@ -14,7 +14,7 @@
 	add method name in DllEntry
 	Return: check = Indicates that the custom action will run synchronously and the return code will be checked
 	-->
-	<Binary Id='CustomActionsDll' SourceFile="C:\Users\Jonas.Brueck\source\repos\WixExample\CustomAction\bin\Debug\net472\CustomAction.CA.dll" />
+	<Binary Id='CustomActionsDll' SourceFile="CustomAction.CA.dll" />
 	<CustomAction Id="CustomAction" DllEntry="CustomAction1" Execute="immediate" Return="check" Impersonate="no" BinaryRef="CustomActionsDll" />
  </Fragment>
 </Wix>
